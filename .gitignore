@@ -1,2 +1,6 @@
 */.ipynb_checkpoints*
 ./dataset/*
+dataset/*
+train/dict_dataset
+train/dnn_model_keras
+analytics/test.db
