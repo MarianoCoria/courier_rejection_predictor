@@ -1,10 +1,17 @@
 import itertools
 import matplotlib.pyplot as plt
-
+import numpy as np
 from sklearn.metrics import precision_score, recall_score, roc_auc_score, roc_curve
 
 
-def evaluate_model(test_labels, predictions, probs, train_labels,train_predictions, train_probs):
+def evaluate_model(test_labels
+                   ,predictions
+                   ,probs
+                   ,train_labels
+                   ,train_predictions
+                   ,train_probs
+                   ,save_png=False
+                   ,png_name='roc.png'):
     
     # Plot formatting
     plt.style.use('fivethirtyeight')
@@ -48,11 +55,17 @@ def evaluate_model(test_labels, predictions, probs, train_labels,train_predictio
     plt.title('ROC Curves');
     plt.show();
     
-    #plt.savefig('roc_auc_curve_50k_2.png')
-    
+    if (save_png):
+        plt.savefig(png_name)    
     
 
-def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix', cmap=plt.cm.Oranges):
+def plot_confusion_matrix(cm
+                          ,classes
+                          ,normalize=False
+                          ,title='Confusion matrix'
+                          ,cmap=plt.cm.Oranges
+                          ,save_png=False
+                          ,png_name='cm.png'):
     print(cm)
 
     plt.figure(figsize = (10, 10))
@@ -77,5 +90,6 @@ def plot_confusion_matrix(cm, classes, normalize=False, title='Confusion matrix'
     plt.ylabel('True label', size = 18)
     plt.xlabel('Predicted label', size = 18)
 
-    #plt.savefig('cm_2.png')
+    if (save_png):
+        plt.savefig(png_name)
 
