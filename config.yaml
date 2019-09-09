@@ -23,6 +23,9 @@ etl:
                     ,'to_user_distance'
                     ,'total_earning'
                     ,'to_user_elevation'
+                    ,'rate_earning_distance'
+                    ,'rate_earning_elevation'
+                    ,'negative_el_diff'
                    ]
                    
     day_risk_groups: {'day_risk_group_1': ['5']
