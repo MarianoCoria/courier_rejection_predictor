@@ -3,4 +3,6 @@
 dataset/*
 train/dict_dataset
 train/dnn_model_keras
-analytics/test.db
+analytics/*.db
+etl/*.db
+train/__pycache__/
