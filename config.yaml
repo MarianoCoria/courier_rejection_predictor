@@ -1,0 +1,35 @@
+general:
+    label: 'taken'
+
+analytics:
+
+etl:
+    features_to_discretize: ['to_user_distance'
+                              ,'to_user_elevation'
+                              ,'total_earning'
+                             ]
+
+    discrete_features: ['day_risk_group_1'
+                         ,'day_risk_group_2'
+                         ,'day_risk_group_3'
+                         ,'day_risk_group_4'
+                        ]
+
+    reg_features: ['store_not_taken_rate_2d'
+                    ,'store_not_taken_rate_1d'
+                    ,'store_not_taken_rate_12h'
+                    ,'store_not_taken_rate_3h'
+                    ,'store_not_taken_rate_1h'
+                    ,'to_user_distance'
+                    ,'total_earning'
+                    ,'to_user_elevation'
+                   ]
+                   
+    day_risk_groups: {'day_risk_group_1': ['5']
+                    ,'day_risk_group_2': ['0','3','4']
+                    ,'day_risk_group_3': ['1','2']
+                    ,'day_risk_group_4': ['6']
+                    }
+
+training:
+    rseed: 50
